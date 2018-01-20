@@ -1,0 +1,3566 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Linux System Call Table - aarch64</title>
+</head>
+<body style="background-color: #212529">
+  <h1 class="text-white">Linux System Call Table - aarch64</h1>
+  <p class="text-white">Generated from Linux kernel 4.14.14</p>
+  <p class="text-white">Project on <a class="badge badge-secondary" href="https://github.com/Thog/syscalls-table-aarch64">GitHub</a></p>
+  <p class="text-white">Hosted on <a class="badge badge-secondary" href="https://pages.github.com/">GitHub Pages</a></p>
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col" colspan="7">Registers</th>
+        <th scope="col">Definition</th>
+      </tr>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col">x7</th>
+        <th scope="col">x0</th>
+        <th scope="col">x1</th>
+        <th scope="col">x2</th>
+        <th scope="col">x3</th>
+        <th scope="col">x4</th>
+        <th scope="col">x5</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="col">0</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/restart_syscall.2.html">restart_syscall</a></td>
+        <td>0x80</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/signal.c#L2477">kernel/signal.c:2477</a></td>
+      </tr>
+      <tr>
+        <th scope="col">1</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/exit.2.html">exit</a></td>
+        <td>0x5D</td>
+        <td>int error_code</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/exit.c#L935">kernel/exit.c:935</a></td>
+      </tr>
+      <tr>
+        <th scope="col">3</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/read.2.html">read</a></td>
+        <td>0x3F</td>
+        <td>unsigned int fd</td>
+        <td>char __user *buf</td>
+        <td>size_t count</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/read_write.c#L566">fs/read_write.c:566</a></td>
+      </tr>
+      <tr>
+        <th scope="col">4</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/write.2.html">write</a></td>
+        <td>0x40</td>
+        <td>unsigned int fd</td>
+        <td>const char __user *buf</td>
+        <td>size_t count</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/read_write.c#L581">fs/read_write.c:581</a></td>
+      </tr>
+      <tr>
+        <th scope="col">5</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/open.2.html">open</a></td>
+        <td>0x400</td>
+        <td>const char __user *filename</td>
+        <td>int flags</td>
+        <td>umode_t mode</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/fhandle.c#L257">fs/fhandle.c:257</a></td>
+      </tr>
+      <tr>
+        <th scope="col">6</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/close.2.html">close</a></td>
+        <td>0x39</td>
+        <td>unsigned int fd</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/open.c#L1153">fs/open.c:1153</a></td>
+      </tr>
+      <tr>
+        <th scope="col">8</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/creat.2.html">creat</a></td>
+        <td>0x428</td>
+        <td>const char __user *pathname</td>
+        <td>umode_t mode</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/open.c#L1115">fs/open.c:1115</a></td>
+      </tr>
+      <tr>
+        <th scope="col">9</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/link.2.html">link</a></td>
+        <td>0x401</td>
+        <td>const char __user *oldname</td>
+        <td>const char __user *newname</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/namei.c#L4304">fs/namei.c:4304</a></td>
+      </tr>
+      <tr>
+        <th scope="col">10</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/unlink.2.html">unlink</a></td>
+        <td>0x402</td>
+        <td>const char __user *pathname</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/namei.c#L4088">fs/namei.c:4088</a></td>
+      </tr>
+      <tr>
+        <th scope="col">11</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/execve.2.html">execve</a></td>
+        <td>0xDD</td>
+        <td>const char __user *filename</td>
+        <td>const char __user *const __user *argv</td>
+        <td>const char __user *const __user *envp</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/exec.c#L1924">fs/exec.c:1924</a></td>
+      </tr>
+      <tr>
+        <th scope="col">12</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/chdir.2.html">chdir</a></td>
+        <td>0x31</td>
+        <td>const char __user *filename</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/open.c#L434">fs/open.c:434</a></td>
+      </tr>
+      <tr>
+        <th scope="col">14</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/mknod.2.html">mknod</a></td>
+        <td>0x403</td>
+        <td>const char __user *filename</td>
+        <td>umode_t mode</td>
+        <td>unsigned dev</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/namei.c#L3776">fs/namei.c:3776</a></td>
+      </tr>
+      <tr>
+        <th scope="col">15</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/chmod.2.html">chmod</a></td>
+        <td>0x404</td>
+        <td>const char __user *filename</td>
+        <td>umode_t mode</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/open.c#L575">fs/open.c:575</a></td>
+      </tr>
+      <tr>
+        <th scope="col">19</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/lseek.2.html">lseek</a></td>
+        <td>0x421</td>
+        <td>unsigned int fd</td>
+        <td>off_t offset</td>
+        <td>unsigned int whence</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/read_write.c#L304">fs/read_write.c:304</a></td>
+      </tr>
+      <tr>
+        <th scope="col">20</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getpid.2.html">getpid</a></td>
+        <td>0xAC</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L838">kernel/sys.c:838</a></td>
+      </tr>
+      <tr>
+        <th scope="col">21</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/mount.2.html">mount</a></td>
+        <td>0x28</td>
+        <td>char __user *dev_name</td>
+        <td>char __user *dir_name</td>
+        <td>char __user *type</td>
+        <td>unsigned long flags</td>
+        <td>void __user *data</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/namespace.c#L3034">fs/namespace.c:3034</a></td>
+      </tr>
+      <tr>
+        <th scope="col">22</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/umount.2.html">umount</a></td>
+        <td>0x434</td>
+        <td>char __user *name</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/namespace.c#L1728">fs/namespace.c:1728</a></td>
+      </tr>
+      <tr>
+        <th scope="col">26</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/ptrace.2.html">ptrace</a></td>
+        <td>0x75</td>
+        <td>long request</td>
+        <td>long pid</td>
+        <td>unsigned long addr</td>
+        <td>unsigned long data</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/ptrace.c#L1121">kernel/ptrace.c:1121</a></td>
+      </tr>
+      <tr>
+        <th scope="col">33</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/access.2.html">access</a></td>
+        <td>0x409</td>
+        <td>const char __user *filename</td>
+        <td>int mode</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/open.c#L429">fs/open.c:429</a></td>
+      </tr>
+      <tr>
+        <th scope="col">36</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/sync.2.html">sync</a></td>
+        <td>0x51</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/sync.c#L108">fs/sync.c:108</a></td>
+      </tr>
+      <tr>
+        <th scope="col">37</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/kill.2.html">kill</a></td>
+        <td>0x81</td>
+        <td>pid_t pid</td>
+        <td>int sig</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/signal.c#L2955">kernel/signal.c:2955</a></td>
+      </tr>
+      <tr>
+        <th scope="col">38</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/rename.2.html">rename</a></td>
+        <td>0x40A</td>
+        <td>const char __user *oldname</td>
+        <td>const char __user *newname</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/namei.c#L4633">fs/namei.c:4633</a></td>
+      </tr>
+      <tr>
+        <th scope="col">39</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/mkdir.2.html">mkdir</a></td>
+        <td>0x406</td>
+        <td>const char __user *pathname</td>
+        <td>umode_t mode</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/namei.c#L3832">fs/namei.c:3832</a></td>
+      </tr>
+      <tr>
+        <th scope="col">40</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/rmdir.2.html">rmdir</a></td>
+        <td>0x407</td>
+        <td>const char __user *pathname</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/namei.c#L3935">fs/namei.c:3935</a></td>
+      </tr>
+      <tr>
+        <th scope="col">41</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/dup.2.html">dup</a></td>
+        <td>0x17</td>
+        <td>unsigned int fildes</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/file.c#L925">fs/file.c:925</a></td>
+      </tr>
+      <tr>
+        <th scope="col">42</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/pipe.2.html">pipe</a></td>
+        <td>0x410</td>
+        <td>int __user *fildes</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/pipe.c#L861">fs/pipe.c:861</a></td>
+      </tr>
+      <tr>
+        <th scope="col">43</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/times.2.html">times</a></td>
+        <td>0x99</td>
+        <td>struct tms __user *tbuf</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L903">kernel/sys.c:903</a></td>
+      </tr>
+      <tr>
+        <th scope="col">45</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/brk.2.html">brk</a></td>
+        <td>0xD6</td>
+        <td>unsigned long brk</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/mmap.c#L182">mm/mmap.c:182</a></td>
+      </tr>
+      <tr>
+        <th scope="col">51</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/acct.2.html">acct</a></td>
+        <td>0x59</td>
+        <td>const char __user *name</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/acct.c#L273">kernel/acct.c:273</a></td>
+      </tr>
+      <tr>
+        <th scope="col">52</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/umount2.2.html">umount2</a></td>
+        <td>0x27</td>
+        <td>char __user *name</td>
+        <td>int flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/namespace.c#L1683">fs/namespace.c:1683</a></td>
+      </tr>
+      <tr>
+        <th scope="col">54</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/ioctl.2.html">ioctl</a></td>
+        <td>0x1D</td>
+        <td>unsigned int fd</td>
+        <td>unsigned int cmd</td>
+        <td>unsigned long arg</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/ioctl.c#L692">fs/ioctl.c:692</a></td>
+      </tr>
+      <tr>
+        <th scope="col">55</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/fcntl.2.html">fcntl</a></td>
+        <td>0x41C</td>
+        <td>unsigned int fd</td>
+        <td>unsigned int cmd</td>
+        <td>unsigned long arg</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/fcntl.c#L448">fs/fcntl.c:448</a></td>
+      </tr>
+      <tr>
+        <th scope="col">57</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/setpgid.2.html">setpgid</a></td>
+        <td>0x9A</td>
+        <td>pid_t pid</td>
+        <td>pid_t pgid</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L953">kernel/sys.c:953</a></td>
+      </tr>
+      <tr>
+        <th scope="col">60</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/umask.2.html">umask</a></td>
+        <td>0xA6</td>
+        <td>int mask</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L1754">kernel/sys.c:1754</a></td>
+      </tr>
+      <tr>
+        <th scope="col">61</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/chroot.2.html">chroot</a></td>
+        <td>0x33</td>
+        <td>const char __user *filename</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/open.c#L482">fs/open.c:482</a></td>
+      </tr>
+      <tr>
+        <th scope="col">62</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/ustat.2.html">ustat</a></td>
+        <td>0x42E</td>
+        <td>unsigned dev</td>
+        <td>struct ustat __user *ubuf</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/statfs.c#L232">fs/statfs.c:232</a></td>
+      </tr>
+      <tr>
+        <th scope="col">63</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/dup2.2.html">dup2</a></td>
+        <td>0x411</td>
+        <td>unsigned int oldfd</td>
+        <td>unsigned int newfd</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/file.c#L910">fs/file.c:910</a></td>
+      </tr>
+      <tr>
+        <th scope="col">64</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getppid.2.html">getppid</a></td>
+        <td>0xAD</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L855">kernel/sys.c:855</a></td>
+      </tr>
+      <tr>
+        <th scope="col">66</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/setsid.2.html">setsid</a></td>
+        <td>0x9D</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L1100">kernel/sys.c:1100</a></td>
+      </tr>
+      <tr>
+        <th scope="col">74</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/sethostname.2.html">sethostname</a></td>
+        <td>0xA1</td>
+        <td>char __user *name</td>
+        <td>int len</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L1249">kernel/sys.c:1249</a></td>
+      </tr>
+      <tr>
+        <th scope="col">75</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/setrlimit.2.html">setrlimit</a></td>
+        <td>0xA4</td>
+        <td>unsigned int resource</td>
+        <td>struct rlimit __user *rlim</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L1602">kernel/sys.c:1602</a></td>
+      </tr>
+      <tr>
+        <th scope="col">77</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getrusage.2.html">getrusage</a></td>
+        <td>0xA5</td>
+        <td>int who</td>
+        <td>struct rusage __user *ru</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L1728">kernel/sys.c:1728</a></td>
+      </tr>
+      <tr>
+        <th scope="col">78</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/gettimeofday.2.html">gettimeofday</a></td>
+        <td>0xA9</td>
+        <td>struct timeval __user *tv</td>
+        <td>struct timezone __user *tz</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/time/time.c#L144">kernel/time/time.c:144</a></td>
+      </tr>
+      <tr>
+        <th scope="col">79</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/settimeofday.2.html">settimeofday</a></td>
+        <td>0xAA</td>
+        <td>struct timeval __user *tv</td>
+        <td>struct timezone __user *tz</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/time/time.c#L235">kernel/time/time.c:235</a></td>
+      </tr>
+      <tr>
+        <th scope="col">83</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/symlink.2.html">symlink</a></td>
+        <td>0x40C</td>
+        <td>const char __user *old</td>
+        <td>const char __user *new</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/namei.c#L4145">fs/namei.c:4145</a></td>
+      </tr>
+      <tr>
+        <th scope="col">85</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/readlink.2.html">readlink</a></td>
+        <td>0x40B</td>
+        <td>const char __user *path</td>
+        <td>char __user *buf</td>
+        <td>int bufsiz</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/stat.c#L418">fs/stat.c:418</a></td>
+      </tr>
+      <tr>
+        <th scope="col">86</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/uselib.2.html">uselib</a></td>
+        <td>0x435</td>
+        <td>const char __user *library</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/exec.c#L120">fs/exec.c:120</a></td>
+      </tr>
+      <tr>
+        <th scope="col">87</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/swapon.2.html">swapon</a></td>
+        <td>0xE0</td>
+        <td>const char __user *specialfile</td>
+        <td>int swap_flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/swapfile.c#L3087">mm/swapfile.c:3087</a></td>
+      </tr>
+      <tr>
+        <th scope="col">88</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/reboot.2.html">reboot</a></td>
+        <td>0x8E</td>
+        <td>int magic1</td>
+        <td>int magic2</td>
+        <td>unsigned int cmd</td>
+        <td>void __user *arg</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/reboot.c#L280">kernel/reboot.c:280</a></td>
+      </tr>
+      <tr>
+        <th scope="col">91</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/munmap.2.html">munmap</a></td>
+        <td>0xD7</td>
+        <td>unsigned long addr</td>
+        <td>size_t len</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/mmap.c#L2737">mm/mmap.c:2737</a></td>
+      </tr>
+      <tr>
+        <th scope="col">92</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/truncate.2.html">truncate</a></td>
+        <td>0x418</td>
+        <td>const char __user *path</td>
+        <td>long length</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/open.c#L153">fs/open.c:153</a></td>
+      </tr>
+      <tr>
+        <th scope="col">93</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/ftruncate.2.html">ftruncate</a></td>
+        <td>0x417</td>
+        <td>unsigned int fd</td>
+        <td>unsigned long length</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/open.c#L213">fs/open.c:213</a></td>
+      </tr>
+      <tr>
+        <th scope="col">94</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/fchmod.2.html">fchmod</a></td>
+        <td>0x34</td>
+        <td>unsigned int fd</td>
+        <td>umode_t mode</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/open.c#L544">fs/open.c:544</a></td>
+      </tr>
+      <tr>
+        <th scope="col">96</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getpriority.2.html">getpriority</a></td>
+        <td>0x8D</td>
+        <td>int which</td>
+        <td>int who</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L253">kernel/sys.c:253</a></td>
+      </tr>
+      <tr>
+        <th scope="col">97</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/setpriority.2.html">setpriority</a></td>
+        <td>0x8C</td>
+        <td>int which</td>
+        <td>int who</td>
+        <td>int niceval</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L183">kernel/sys.c:183</a></td>
+      </tr>
+      <tr>
+        <th scope="col">99</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/statfs.2.html">statfs</a></td>
+        <td>0x420</td>
+        <td>const char __user * path</td>
+        <td>struct statfs __user *buf</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/statfs.c#L176">fs/statfs.c:176</a></td>
+      </tr>
+      <tr>
+        <th scope="col">100</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/fstatfs.2.html">fstatfs</a></td>
+        <td>0x41F</td>
+        <td>unsigned int fd</td>
+        <td>struct statfs __user *buf</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/statfs.c#L197">fs/statfs.c:197</a></td>
+      </tr>
+      <tr>
+        <th scope="col">103</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/syslog.2.html">syslog</a></td>
+        <td>0x74</td>
+        <td>int type</td>
+        <td>char __user *buf</td>
+        <td>int len</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/printk/printk.c#L1541">kernel/printk/printk.c:1541</a></td>
+      </tr>
+      <tr>
+        <th scope="col">104</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/setitimer.2.html">setitimer</a></td>
+        <td>0x67</td>
+        <td>int which</td>
+        <td>struct itimerval __user *value</td>
+        <td>struct itimerval __user *ovalue</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/time/itimer.c#L292">kernel/time/itimer.c:292</a></td>
+      </tr>
+      <tr>
+        <th scope="col">105</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getitimer.2.html">getitimer</a></td>
+        <td>0x66</td>
+        <td>int which</td>
+        <td>struct itimerval __user *value</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/time/itimer.c#L107">kernel/time/itimer.c:107</a></td>
+      </tr>
+      <tr>
+        <th scope="col">106</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/stat.2.html">stat</a></td>
+        <td>0x419</td>
+        <td>const char __user *filename</td>
+        <td>struct stat __user *statbuf</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/stat.c#L333">fs/stat.c:333</a></td>
+      </tr>
+      <tr>
+        <th scope="col">107</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/lstat.2.html">lstat</a></td>
+        <td>0x41A</td>
+        <td>const char __user *filename</td>
+        <td>struct stat __user *statbuf</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/stat.c#L344">fs/stat.c:344</a></td>
+      </tr>
+      <tr>
+        <th scope="col">108</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/fstat.2.html">fstat</a></td>
+        <td>0x41B</td>
+        <td>unsigned int fd</td>
+        <td>struct stat __user *statbuf</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/stat.c#L371">fs/stat.c:371</a></td>
+      </tr>
+      <tr>
+        <th scope="col">111</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/vhangup.2.html">vhangup</a></td>
+        <td>0x3A</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/open.c#L1172">fs/open.c:1172</a></td>
+      </tr>
+      <tr>
+        <th scope="col">114</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/wait4.2.html">wait4</a></td>
+        <td>0x104</td>
+        <td>pid_t pid</td>
+        <td>int __user *stat_addr</td>
+        <td>int options</td>
+        <td>struct rusage __user *ru</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/exit.c#L1673">kernel/exit.c:1673</a></td>
+      </tr>
+      <tr>
+        <th scope="col">115</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/swapoff.2.html">swapoff</a></td>
+        <td>0xE1</td>
+        <td>const char __user *specialfile</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/swapfile.c#L2526">mm/swapfile.c:2526</a></td>
+      </tr>
+      <tr>
+        <th scope="col">116</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/sysinfo.2.html">sysinfo</a></td>
+        <td>0xB3</td>
+        <td>struct sysinfo __user *info</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L2475">kernel/sys.c:2475</a></td>
+      </tr>
+      <tr>
+        <th scope="col">118</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/fsync.2.html">fsync</a></td>
+        <td>0x52</td>
+        <td>unsigned int fd</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/sync.c#L226">fs/sync.c:226</a></td>
+      </tr>
+      <tr>
+        <th scope="col">120</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/clone.2.html">clone</a></td>
+        <td>0xDC</td>
+        <td>unsigned long</td>
+        <td>unsigned long</td>
+        <td>int</td>
+        <td>int __user *</td>
+        <td>int __user *</td>
+        <td>unsigned long</td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/fork.c#L2136">kernel/fork.c:2136</a></td>
+      </tr>
+      <tr>
+        <th scope="col">121</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/setdomainname.2.html">setdomainname</a></td>
+        <td>0xA2</td>
+        <td>char __user *name</td>
+        <td>int len</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L1300">kernel/sys.c:1300</a></td>
+      </tr>
+      <tr>
+        <th scope="col">122</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/uname.2.html">uname</a></td>
+        <td>0xA0</td>
+        <td>struct new_utsname __user *name</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L1175">kernel/sys.c:1175</a></td>
+      </tr>
+      <tr>
+        <th scope="col">124</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/adjtimex.2.html">adjtimex</a></td>
+        <td>0xAB</td>
+        <td>struct timex __user *txc_p</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/time/time.c#L301">kernel/time/time.c:301</a></td>
+      </tr>
+      <tr>
+        <th scope="col">125</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/mprotect.2.html">mprotect</a></td>
+        <td>0xE2</td>
+        <td>unsigned long start</td>
+        <td>size_t len</td>
+        <td>unsigned long prot</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/mprotect.c#L514">mm/mprotect.c:514</a></td>
+      </tr>
+      <tr>
+        <th scope="col">128</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/init_module.2.html">init_module</a></td>
+        <td>0x69</td>
+        <td>void __user *umod</td>
+        <td>unsigned long len</td>
+        <td>const char __user *uargs</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/module.c#L3816">kernel/module.c:3816</a></td>
+      </tr>
+      <tr>
+        <th scope="col">129</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/delete_module.2.html">delete_module</a></td>
+        <td>0x6A</td>
+        <td>const char __user *name_user</td>
+        <td>unsigned int flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/module.c#L954">kernel/module.c:954</a></td>
+      </tr>
+      <tr>
+        <th scope="col">131</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/quotactl.2.html">quotactl</a></td>
+        <td>0x3C</td>
+        <td>unsigned int cmd</td>
+        <td>const char __user *special</td>
+        <td>qid_t id</td>
+        <td>void __user *addr</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/quota/quota.c#L836">fs/quota/quota.c:836</a></td>
+      </tr>
+      <tr>
+        <th scope="col">132</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getpgid.2.html">getpgid</a></td>
+        <td>0x9B</td>
+        <td>pid_t pid</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L1024">kernel/sys.c:1024</a></td>
+      </tr>
+      <tr>
+        <th scope="col">133</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/fchdir.2.html">fchdir</a></td>
+        <td>0x32</td>
+        <td>unsigned int fd</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/open.c#L460">fs/open.c:460</a></td>
+      </tr>
+      <tr>
+        <th scope="col">134</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/bdflush.2.html">bdflush</a></td>
+        <td>0x433</td>
+        <td>int func</td>
+        <td>long data</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/buffer.c#L3362">fs/buffer.c:3362</a></td>
+      </tr>
+      <tr>
+        <th scope="col">136</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/personality.2.html">personality</a></td>
+        <td>0x5C</td>
+        <td>unsigned int personality</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/exec_domain.c#L51">kernel/exec_domain.c:51</a></td>
+      </tr>
+      <tr>
+        <th scope="col">140</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/_llseek.2.html">_llseek</a></td>
+        <td>0x3E</td>
+        <td>unsigned int fd</td>
+        <td>unsigned long offset_high</td>
+        <td>unsigned long offset_low</td>
+        <td>loff_t __user *result</td>
+        <td>unsigned int whence</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/read_write.c#L330">fs/read_write.c:330</a></td>
+      </tr>
+      <tr>
+        <th scope="col">143</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/flock.2.html">flock</a></td>
+        <td>0x20</td>
+        <td>unsigned int fd</td>
+        <td>unsigned int cmd</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/locks.c#L1996">fs/locks.c:1996</a></td>
+      </tr>
+      <tr>
+        <th scope="col">144</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/msync.2.html">msync</a></td>
+        <td>0xE3</td>
+        <td>unsigned long start</td>
+        <td>size_t len</td>
+        <td>int flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/msync.c#L32">mm/msync.c:32</a></td>
+      </tr>
+      <tr>
+        <th scope="col">145</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/readv.2.html">readv</a></td>
+        <td>0x41</td>
+        <td>unsigned long fd</td>
+        <td>const struct iovec __user *vec</td>
+        <td>unsigned long vlen</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/read_write.c#L1097">fs/read_write.c:1097</a></td>
+      </tr>
+      <tr>
+        <th scope="col">146</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/writev.2.html">writev</a></td>
+        <td>0x42</td>
+        <td>unsigned long fd</td>
+        <td>const struct iovec __user *vec</td>
+        <td>unsigned long vlen</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/read_write.c#L1103">fs/read_write.c:1103</a></td>
+      </tr>
+      <tr>
+        <th scope="col">147</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getsid.2.html">getsid</a></td>
+        <td>0x9C</td>
+        <td>pid_t pid</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L1061">kernel/sys.c:1061</a></td>
+      </tr>
+      <tr>
+        <th scope="col">148</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/fdatasync.2.html">fdatasync</a></td>
+        <td>0x53</td>
+        <td>unsigned int fd</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/sync.c#L231">fs/sync.c:231</a></td>
+      </tr>
+      <tr>
+        <th scope="col">149</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/_sysctl.2.html">_sysctl</a></td>
+        <td>0x436</td>
+        <td>struct __sysctl_args __user *args</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sysctl_binary.c#L1419">kernel/sysctl_binary.c:1419</a></td>
+      </tr>
+      <tr>
+        <th scope="col">150</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/mlock.2.html">mlock</a></td>
+        <td>0xE4</td>
+        <td>unsigned long start</td>
+        <td>size_t len</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/mlock.c#L711">mm/mlock.c:711</a></td>
+      </tr>
+      <tr>
+        <th scope="col">151</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/munlock.2.html">munlock</a></td>
+        <td>0xE5</td>
+        <td>unsigned long start</td>
+        <td>size_t len</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/mlock.c#L729">mm/mlock.c:729</a></td>
+      </tr>
+      <tr>
+        <th scope="col">152</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/mlockall.2.html">mlockall</a></td>
+        <td>0xE6</td>
+        <td>int flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/mlock.c#L790">mm/mlock.c:790</a></td>
+      </tr>
+      <tr>
+        <th scope="col">153</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/munlockall.2.html">munlockall</a></td>
+        <td>0xE7</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/mlock.c#L821">mm/mlock.c:821</a></td>
+      </tr>
+      <tr>
+        <th scope="col">154</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/sched_setparam.2.html">sched_setparam</a></td>
+        <td>0x76</td>
+        <td>pid_t pid</td>
+        <td>struct sched_param __user *param</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sched/core.c#L4421">kernel/sched/core.c:4421</a></td>
+      </tr>
+      <tr>
+        <th scope="col">155</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/sched_getparam.2.html">sched_getparam</a></td>
+        <td>0x79</td>
+        <td>pid_t pid</td>
+        <td>struct sched_param __user *param</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sched/core.c#L4495">kernel/sched/core.c:4495</a></td>
+      </tr>
+      <tr>
+        <th scope="col">156</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/sched_setscheduler.2.html">sched_setscheduler</a></td>
+        <td>0x77</td>
+        <td>pid_t pid</td>
+        <td>int policy</td>
+        <td>struct sched_param __user *param</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sched/core.c#L4406">kernel/sched/core.c:4406</a></td>
+      </tr>
+      <tr>
+        <th scope="col">157</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/sched_getscheduler.2.html">sched_getscheduler</a></td>
+        <td>0x78</td>
+        <td>pid_t pid</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sched/core.c#L4466">kernel/sched/core.c:4466</a></td>
+      </tr>
+      <tr>
+        <th scope="col">158</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/sched_yield.2.html">sched_yield</a></td>
+        <td>0x7C</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sched/core.c#L4812">kernel/sched/core.c:4812</a></td>
+      </tr>
+      <tr>
+        <th scope="col">159</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/sched_get_priority_max.2.html">sched_get_priority_max</a></td>
+        <td>0x7D</td>
+        <td>int policy</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sched/core.c#L5044">kernel/sched/core.c:5044</a></td>
+      </tr>
+      <tr>
+        <th scope="col">160</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/sched_get_priority_min.2.html">sched_get_priority_min</a></td>
+        <td>0x7E</td>
+        <td>int policy</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sched/core.c#L5071">kernel/sched/core.c:5071</a></td>
+      </tr>
+      <tr>
+        <th scope="col">162</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/nanosleep.2.html">nanosleep</a></td>
+        <td>0x65</td>
+        <td>struct timespec __user *rqtp</td>
+        <td>struct timespec __user *rmtp</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/time/hrtimer.c#L1546">kernel/time/hrtimer.c:1546</a></td>
+      </tr>
+      <tr>
+        <th scope="col">163</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/mremap.2.html">mremap</a></td>
+        <td>0xD8</td>
+        <td>unsigned long addr</td>
+        <td>unsigned long old_len</td>
+        <td>unsigned long new_len</td>
+        <td>unsigned long flags</td>
+        <td>unsigned long new_addr</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/mremap.c#L523">mm/mremap.c:523</a></td>
+      </tr>
+      <tr>
+        <th scope="col">168</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/poll.2.html">poll</a></td>
+        <td>0x42C</td>
+        <td>struct pollfd __user *ufds</td>
+        <td>unsigned int nfds</td>
+        <td>int timeout</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/select.c#L1016">fs/select.c:1016</a></td>
+      </tr>
+      <tr>
+        <th scope="col">172</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/prctl.2.html">prctl</a></td>
+        <td>0xA7</td>
+        <td>int option</td>
+        <td>unsigned long arg2</td>
+        <td>unsigned long arg3</td>
+        <td>unsigned long arg4</td>
+        <td>unsigned long arg5</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L2187">kernel/sys.c:2187</a></td>
+      </tr>
+      <tr>
+        <th scope="col">174</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/rt_sigaction.2.html">rt_sigaction</a></td>
+        <td>0x86</td>
+        <td>int</td>
+        <td>const struct sigaction __user *</td>
+        <td>struct sigaction __user *</td>
+        <td>size_t</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/signal.c#L3423">kernel/signal.c:3423</a></td>
+      </tr>
+      <tr>
+        <th scope="col">175</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/rt_sigprocmask.2.html">rt_sigprocmask</a></td>
+        <td>0x87</td>
+        <td>int how</td>
+        <td>sigset_t __user *set</td>
+        <td>sigset_t __user *oset</td>
+        <td>size_t sigsetsize</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/signal.c#L2571">kernel/signal.c:2571</a></td>
+      </tr>
+      <tr>
+        <th scope="col">176</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/rt_sigpending.2.html">rt_sigpending</a></td>
+        <td>0x88</td>
+        <td>sigset_t __user *set</td>
+        <td>size_t sigsetsize</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/signal.c#L2661">kernel/signal.c:2661</a></td>
+      </tr>
+      <tr>
+        <th scope="col">179</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/rt_sigsuspend.2.html">rt_sigsuspend</a></td>
+        <td>0x85</td>
+        <td>sigset_t __user *unewset</td>
+        <td>size_t sigsetsize</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/signal.c#L3650">kernel/signal.c:3650</a></td>
+      </tr>
+      <tr>
+        <th scope="col">180</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/pread64.2.html">pread64</a></td>
+        <td>0x43</td>
+        <td>unsigned int fd</td>
+        <td>char __user *buf</td>
+        <td>size_t count</td>
+        <td>loff_t pos</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/read_write.c#L598">fs/read_write.c:598</a></td>
+      </tr>
+      <tr>
+        <th scope="col">181</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/pwrite64.2.html">pwrite64</a></td>
+        <td>0x44</td>
+        <td>unsigned int fd</td>
+        <td>const char __user *buf</td>
+        <td>size_t count</td>
+        <td>loff_t pos</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/read_write.c#L618">fs/read_write.c:618</a></td>
+      </tr>
+      <tr>
+        <th scope="col">183</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getcwd.2.html">getcwd</a></td>
+        <td>0x11</td>
+        <td>char __user *buf</td>
+        <td>unsigned long size</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/dcache.c#L3443">fs/dcache.c:3443</a></td>
+      </tr>
+      <tr>
+        <th scope="col">184</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/capget.2.html">capget</a></td>
+        <td>0x5A</td>
+        <td>cap_user_header_t header</td>
+        <td>cap_user_data_t dataptr</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/capability.c#L150">kernel/capability.c:150</a></td>
+      </tr>
+      <tr>
+        <th scope="col">185</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/capset.2.html">capset</a></td>
+        <td>0x5B</td>
+        <td>cap_user_header_t header</td>
+        <td>const cap_user_data_t data</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/capability.c#L224">kernel/capability.c:224</a></td>
+      </tr>
+      <tr>
+        <th scope="col">186</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/sigaltstack.2.html">sigaltstack</a></td>
+        <td>0x84</td>
+        <td>const struct sigaltstack __user *uss</td>
+        <td>struct sigaltstack __user *uoss</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/signal.c#L3247">kernel/signal.c:3247</a></td>
+      </tr>
+      <tr>
+        <th scope="col">187</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/sendfile.2.html">sendfile</a></td>
+        <td>0x416</td>
+        <td>int out_fd</td>
+        <td>int in_fd</td>
+        <td>off_t __user *offset</td>
+        <td>size_t count</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/read_write.c#L1462">fs/read_write.c:1462</a></td>
+      </tr>
+      <tr>
+        <th scope="col">190</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/vfork.2.html">vfork</a></td>
+        <td>0x42F</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/fork.c#L2127">kernel/fork.c:2127</a></td>
+      </tr>
+      <tr>
+        <th scope="col">191</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/ugetrlimit.2.html">ugetrlimit</a></td>
+        <td>0xA3</td>
+        <td>unsigned int resource</td>
+        <td>struct rlimit __user *rlim</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L1324">kernel/sys.c:1324</a></td>
+      </tr>
+      <tr>
+        <th scope="col">195</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/stat64.2.html">stat64</a></td>
+        <td>0x40E</td>
+        <td>const char __user *filename</td>
+        <td>struct stat64 __user *statbuf</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/stat.c#L467">fs/stat.c:467</a></td>
+      </tr>
+      <tr>
+        <th scope="col">196</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/lstat64.2.html">lstat64</a></td>
+        <td>0x40F</td>
+        <td>const char __user *filename</td>
+        <td>struct stat64 __user *statbuf</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/stat.c#L479">fs/stat.c:479</a></td>
+      </tr>
+      <tr>
+        <th scope="col">197</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/fstat64.2.html">fstat64</a></td>
+        <td>0x50</td>
+        <td>unsigned long fd</td>
+        <td>struct stat64 __user *statbuf</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/stat.c#L491">fs/stat.c:491</a></td>
+      </tr>
+      <tr>
+        <th scope="col">198</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/lchown32.2.html">lchown32</a></td>
+        <td>0x408</td>
+        <td>const char __user *filename</td>
+        <td>uid_t user</td>
+        <td>gid_t group</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/open.c#L659">fs/open.c:659</a></td>
+      </tr>
+      <tr>
+        <th scope="col">199</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getuid32.2.html">getuid32</a></td>
+        <td>0xAE</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L866">kernel/sys.c:866</a></td>
+      </tr>
+      <tr>
+        <th scope="col">200</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getgid32.2.html">getgid32</a></td>
+        <td>0xB0</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L878">kernel/sys.c:878</a></td>
+      </tr>
+      <tr>
+        <th scope="col">201</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/geteuid32.2.html">geteuid32</a></td>
+        <td>0xAF</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L872">kernel/sys.c:872</a></td>
+      </tr>
+      <tr>
+        <th scope="col">202</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getegid32.2.html">getegid32</a></td>
+        <td>0xB1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L884">kernel/sys.c:884</a></td>
+      </tr>
+      <tr>
+        <th scope="col">203</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/setreuid32.2.html">setreuid32</a></td>
+        <td>0x91</td>
+        <td>uid_t ruid</td>
+        <td>uid_t euid</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L470">kernel/sys.c:470</a></td>
+      </tr>
+      <tr>
+        <th scope="col">204</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/setregid32.2.html">setregid32</a></td>
+        <td>0x8F</td>
+        <td>gid_t rgid</td>
+        <td>gid_t egid</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L337">kernel/sys.c:337</a></td>
+      </tr>
+      <tr>
+        <th scope="col">205</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getgroups32.2.html">getgroups32</a></td>
+        <td>0x9E</td>
+        <td>int gidsetsize</td>
+        <td>gid_t __user *grouplist</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/groups.c#L153">kernel/groups.c:153</a></td>
+      </tr>
+      <tr>
+        <th scope="col">206</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/setgroups32.2.html">setgroups32</a></td>
+        <td>0x9F</td>
+        <td>int gidsetsize</td>
+        <td>gid_t __user *grouplist</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/groups.c#L190">kernel/groups.c:190</a></td>
+      </tr>
+      <tr>
+        <th scope="col">207</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/fchown32.2.html">fchown32</a></td>
+        <td>0x37</td>
+        <td>unsigned int fd</td>
+        <td>uid_t user</td>
+        <td>gid_t group</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/open.c#L665">fs/open.c:665</a></td>
+      </tr>
+      <tr>
+        <th scope="col">208</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/setresuid32.2.html">setresuid32</a></td>
+        <td>0x93</td>
+        <td>uid_t ruid</td>
+        <td>uid_t euid</td>
+        <td>uid_t suid</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L588">kernel/sys.c:588</a></td>
+      </tr>
+      <tr>
+        <th scope="col">209</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getresuid32.2.html">getresuid32</a></td>
+        <td>0x94</td>
+        <td>uid_t __user *ruid</td>
+        <td>uid_t __user *euid</td>
+        <td>uid_t __user *suid</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L653">kernel/sys.c:653</a></td>
+      </tr>
+      <tr>
+        <th scope="col">210</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/setresgid32.2.html">setresgid32</a></td>
+        <td>0x95</td>
+        <td>gid_t rgid</td>
+        <td>gid_t egid</td>
+        <td>gid_t sgid</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L675">kernel/sys.c:675</a></td>
+      </tr>
+      <tr>
+        <th scope="col">211</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getresgid32.2.html">getresgid32</a></td>
+        <td>0x96</td>
+        <td>gid_t __user *rgid</td>
+        <td>gid_t __user *egid</td>
+        <td>gid_t __user *sgid</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L727">kernel/sys.c:727</a></td>
+      </tr>
+      <tr>
+        <th scope="col">212</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/chown32.2.html">chown32</a></td>
+        <td>0x405</td>
+        <td>const char __user *filename</td>
+        <td>uid_t user</td>
+        <td>gid_t group</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/open.c#L654">fs/open.c:654</a></td>
+      </tr>
+      <tr>
+        <th scope="col">213</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/setuid32.2.html">setuid32</a></td>
+        <td>0x92</td>
+        <td>uid_t uid</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L541">kernel/sys.c:541</a></td>
+      </tr>
+      <tr>
+        <th scope="col">214</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/setgid32.2.html">setgid32</a></td>
+        <td>0x90</td>
+        <td>gid_t gid</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L394">kernel/sys.c:394</a></td>
+      </tr>
+      <tr>
+        <th scope="col">215</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/setfsuid32.2.html">setfsuid32</a></td>
+        <td>0x97</td>
+        <td>uid_t uid</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L754">kernel/sys.c:754</a></td>
+      </tr>
+      <tr>
+        <th scope="col">216</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/setfsgid32.2.html">setfsgid32</a></td>
+        <td>0x98</td>
+        <td>gid_t gid</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L793">kernel/sys.c:793</a></td>
+      </tr>
+      <tr>
+        <th scope="col">217</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getdents64.2.html">getdents64</a></td>
+        <td>0x3D</td>
+        <td>unsigned int fd</td>
+        <td>struct linux_dirent64 __user *dirent</td>
+        <td>unsigned int count</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/readdir.c#L296">fs/readdir.c:296</a></td>
+      </tr>
+      <tr>
+        <th scope="col">218</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/pivot_root.2.html">pivot_root</a></td>
+        <td>0x29</td>
+        <td>const char __user *new_root</td>
+        <td>const char __user *put_old</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/namespace.c#L3118">fs/namespace.c:3118</a></td>
+      </tr>
+      <tr>
+        <th scope="col">219</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/mincore.2.html">mincore</a></td>
+        <td>0xE8</td>
+        <td>unsigned long start</td>
+        <td>size_t len</td>
+        <td>unsigned char __user * vec</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/mincore.c#L224">mm/mincore.c:224</a></td>
+      </tr>
+      <tr>
+        <th scope="col">220</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/madvise.2.html">madvise</a></td>
+        <td>0xE9</td>
+        <td>unsigned long start</td>
+        <td>size_t len</td>
+        <td>int behavior</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/madvise.c#L791">mm/madvise.c:791</a></td>
+      </tr>
+      <tr>
+        <th scope="col">224</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/gettid.2.html">gettid</a></td>
+        <td>0xB2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L844">kernel/sys.c:844</a></td>
+      </tr>
+      <tr>
+        <th scope="col">225</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/readahead.2.html">readahead</a></td>
+        <td>0xD5</td>
+        <td>int fd</td>
+        <td>loff_t offset</td>
+        <td>size_t count</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/readahead.c#L576">mm/readahead.c:576</a></td>
+      </tr>
+      <tr>
+        <th scope="col">226</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/setxattr.2.html">setxattr</a></td>
+        <td>0x5</td>
+        <td>const char __user *path</td>
+        <td>const char __user *name</td>
+        <td>const void __user *value</td>
+        <td>size_t size</td>
+        <td>int flags</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/xattr.c#L483">fs/xattr.c:483</a></td>
+      </tr>
+      <tr>
+        <th scope="col">227</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/lsetxattr.2.html">lsetxattr</a></td>
+        <td>0x6</td>
+        <td>const char __user *path</td>
+        <td>const char __user *name</td>
+        <td>const void __user *value</td>
+        <td>size_t size</td>
+        <td>int flags</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/xattr.c#L490">fs/xattr.c:490</a></td>
+      </tr>
+      <tr>
+        <th scope="col">228</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/fsetxattr.2.html">fsetxattr</a></td>
+        <td>0x7</td>
+        <td>int fd</td>
+        <td>const char __user *name</td>
+        <td>const void __user *value</td>
+        <td>size_t size</td>
+        <td>int flags</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/xattr.c#L497">fs/xattr.c:497</a></td>
+      </tr>
+      <tr>
+        <th scope="col">229</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getxattr.2.html">getxattr</a></td>
+        <td>0x8</td>
+        <td>const char __user *path</td>
+        <td>const char __user *name</td>
+        <td>void __user *value</td>
+        <td>size_t size</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/xattr.c#L577">fs/xattr.c:577</a></td>
+      </tr>
+      <tr>
+        <th scope="col">230</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/lgetxattr.2.html">lgetxattr</a></td>
+        <td>0x9</td>
+        <td>const char __user *path</td>
+        <td>const char __user *name</td>
+        <td>void __user *value</td>
+        <td>size_t size</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/xattr.c#L583">fs/xattr.c:583</a></td>
+      </tr>
+      <tr>
+        <th scope="col">231</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/fgetxattr.2.html">fgetxattr</a></td>
+        <td>0xA</td>
+        <td>int fd</td>
+        <td>const char __user *name</td>
+        <td>void __user *value</td>
+        <td>size_t size</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/xattr.c#L589">fs/xattr.c:589</a></td>
+      </tr>
+      <tr>
+        <th scope="col">232</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/listxattr.2.html">listxattr</a></td>
+        <td>0xB</td>
+        <td>const char __user *path</td>
+        <td>char __user *list</td>
+        <td>size_t size</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/xattr.c#L653">fs/xattr.c:653</a></td>
+      </tr>
+      <tr>
+        <th scope="col">233</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/llistxattr.2.html">llistxattr</a></td>
+        <td>0xC</td>
+        <td>const char __user *path</td>
+        <td>char __user *list</td>
+        <td>size_t size</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/xattr.c#L659">fs/xattr.c:659</a></td>
+      </tr>
+      <tr>
+        <th scope="col">234</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/flistxattr.2.html">flistxattr</a></td>
+        <td>0xD</td>
+        <td>int fd</td>
+        <td>char __user *list</td>
+        <td>size_t size</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/xattr.c#L665">fs/xattr.c:665</a></td>
+      </tr>
+      <tr>
+        <th scope="col">235</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/removexattr.2.html">removexattr</a></td>
+        <td>0xE</td>
+        <td>const char __user *path</td>
+        <td>const char __user *name</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/xattr.c#L718">fs/xattr.c:718</a></td>
+      </tr>
+      <tr>
+        <th scope="col">236</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/lremovexattr.2.html">lremovexattr</a></td>
+        <td>0xF</td>
+        <td>const char __user *path</td>
+        <td>const char __user *name</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/xattr.c#L724">fs/xattr.c:724</a></td>
+      </tr>
+      <tr>
+        <th scope="col">237</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/fremovexattr.2.html">fremovexattr</a></td>
+        <td>0x10</td>
+        <td>int fd</td>
+        <td>const char __user *name</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/xattr.c#L730">fs/xattr.c:730</a></td>
+      </tr>
+      <tr>
+        <th scope="col">238</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/tkill.2.html">tkill</a></td>
+        <td>0x82</td>
+        <td>pid_t pid</td>
+        <td>int sig</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/signal.c#L3037">kernel/signal.c:3037</a></td>
+      </tr>
+      <tr>
+        <th scope="col">239</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/sendfile64.2.html">sendfile64</a></td>
+        <td>0x47</td>
+        <td>int out_fd</td>
+        <td>int in_fd</td>
+        <td>loff_t __user *offset</td>
+        <td>size_t count</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/read_write.c#L1481">fs/read_write.c:1481</a></td>
+      </tr>
+      <tr>
+        <th scope="col">240</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/futex.2.html">futex</a></td>
+        <td>0x62</td>
+        <td>u32 __user *uaddr</td>
+        <td>int op</td>
+        <td>u32 val</td>
+        <td>struct timespec __user *utime</td>
+        <td>u32 __user *uaddr2</td>
+        <td>u32 val3</td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/futex.c#L3519">kernel/futex.c:3519</a></td>
+      </tr>
+      <tr>
+        <th scope="col">243</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/io_setup.2.html">io_setup</a></td>
+        <td>0x0</td>
+        <td>unsigned nr_reqs</td>
+        <td>aio_context_t __user *ctx</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/aio.c#L1354">fs/aio.c:1354</a></td>
+      </tr>
+      <tr>
+        <th scope="col">244</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/io_destroy.2.html">io_destroy</a></td>
+        <td>0x1</td>
+        <td>aio_context_t ctx</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/aio.c#L1423">fs/aio.c:1423</a></td>
+      </tr>
+      <tr>
+        <th scope="col">245</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/io_getevents.2.html">io_getevents</a></td>
+        <td>0x4</td>
+        <td>aio_context_t ctx_id</td>
+        <td>long min_nr</td>
+        <td>long nr</td>
+        <td>struct io_event __user *events</td>
+        <td>struct timespec __user *timeout</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/aio.c#L1841">fs/aio.c:1841</a></td>
+      </tr>
+      <tr>
+        <th scope="col">246</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/io_submit.2.html">io_submit</a></td>
+        <td>0x2</td>
+        <td>aio_context_t</td>
+        <td>long</td>
+        <td>struct iocb __user * __user *</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/aio.c#L1714">fs/aio.c:1714</a></td>
+      </tr>
+      <tr>
+        <th scope="col">247</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/io_cancel.2.html">io_cancel</a></td>
+        <td>0x3</td>
+        <td>aio_context_t ctx_id</td>
+        <td>struct iocb __user *iocb</td>
+        <td>struct io_event __user *result</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/aio.c#L1789">fs/aio.c:1789</a></td>
+      </tr>
+      <tr>
+        <th scope="col">248</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/exit_group.2.html">exit_group</a></td>
+        <td>0x5E</td>
+        <td>int error_code</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/exit.c#L977">kernel/exit.c:977</a></td>
+      </tr>
+      <tr>
+        <th scope="col">249</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/lookup_dcookie.2.html">lookup_dcookie</a></td>
+        <td>0x12</td>
+        <td>u64 cookie64</td>
+        <td>char __user *buf</td>
+        <td>size_t len</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/dcookies.c#L149">fs/dcookies.c:149</a></td>
+      </tr>
+      <tr>
+        <th scope="col">250</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/epoll_create.2.html">epoll_create</a></td>
+        <td>0x412</td>
+        <td>int size</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/eventpoll.c#L1999">fs/eventpoll.c:1999</a></td>
+      </tr>
+      <tr>
+        <th scope="col">251</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/epoll_ctl.2.html">epoll_ctl</a></td>
+        <td>0x15</td>
+        <td>int epfd</td>
+        <td>int op</td>
+        <td>int fd</td>
+        <td>struct epoll_event __user *event</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/eventpoll.c#L2012">fs/eventpoll.c:2012</a></td>
+      </tr>
+      <tr>
+        <th scope="col">252</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/epoll_wait.2.html">epoll_wait</a></td>
+        <td>0x42D</td>
+        <td>int epfd</td>
+        <td>struct epoll_event __user *events</td>
+        <td>int maxevents</td>
+        <td>int timeout</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/eventpoll.c#L2168">fs/eventpoll.c:2168</a></td>
+      </tr>
+      <tr>
+        <th scope="col">253</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/remap_file_pages.2.html">remap_file_pages</a></td>
+        <td>0xEA</td>
+        <td>unsigned long start</td>
+        <td>unsigned long size</td>
+        <td>unsigned long prot</td>
+        <td>unsigned long pgoff</td>
+        <td>unsigned long flags</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/mmap.c#L2747">mm/mmap.c:2747</a></td>
+      </tr>
+      <tr>
+        <th scope="col">256</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/set_tid_address.2.html">set_tid_address</a></td>
+        <td>0x60</td>
+        <td>int __user *tidptr</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/fork.c#L1475">kernel/fork.c:1475</a></td>
+      </tr>
+      <tr>
+        <th scope="col">257</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/timer_create.2.html">timer_create</a></td>
+        <td>0x6B</td>
+        <td>clockid_t which_clock</td>
+        <td>struct sigevent __user *timer_event_spec</td>
+        <td>timer_t __user * created_timer_id</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/time/posix-timers.c#L577">kernel/time/posix-timers.c:577</a></td>
+      </tr>
+      <tr>
+        <th scope="col">258</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/timer_settime.2.html">timer_settime</a></td>
+        <td>0x6E</td>
+        <td>timer_t timer_id</td>
+        <td>int flags</td>
+        <td>const struct itimerspec __user *new_setting</td>
+        <td>struct itimerspec __user *old_setting</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/time/posix-timers.c#L907">kernel/time/posix-timers.c:907</a></td>
+      </tr>
+      <tr>
+        <th scope="col">259</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/timer_gettime.2.html">timer_gettime</a></td>
+        <td>0x6C</td>
+        <td>timer_t timer_id</td>
+        <td>struct itimerspec __user *setting</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/time/posix-timers.c#L744">kernel/time/posix-timers.c:744</a></td>
+      </tr>
+      <tr>
+        <th scope="col">260</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/timer_getoverrun.2.html">timer_getoverrun</a></td>
+        <td>0x6D</td>
+        <td>timer_t timer_id</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/time/posix-timers.c#L781">kernel/time/posix-timers.c:781</a></td>
+      </tr>
+      <tr>
+        <th scope="col">261</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/timer_delete.2.html">timer_delete</a></td>
+        <td>0x6F</td>
+        <td>timer_t timer_id</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/time/posix-timers.c#L973">kernel/time/posix-timers.c:973</a></td>
+      </tr>
+      <tr>
+        <th scope="col">262</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/clock_settime.2.html">clock_settime</a></td>
+        <td>0x70</td>
+        <td>clockid_t which_clock</td>
+        <td>const struct timespec __user *tp</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/time/posix-stubs.c#L51">kernel/time/posix-stubs.c:51</a></td>
+      </tr>
+      <tr>
+        <th scope="col">263</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/clock_gettime.2.html">clock_gettime</a></td>
+        <td>0x71</td>
+        <td>clockid_t which_clock</td>
+        <td>struct timespec __user *tp</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/time/posix-stubs.c#L82">kernel/time/posix-stubs.c:82</a></td>
+      </tr>
+      <tr>
+        <th scope="col">264</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/clock_getres.2.html">clock_getres</a></td>
+        <td>0x72</td>
+        <td>clockid_t which_clock</td>
+        <td>struct timespec __user *tp</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/time/posix-stubs.c#L97">kernel/time/posix-stubs.c:97</a></td>
+      </tr>
+      <tr>
+        <th scope="col">268</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/tgkill.2.html">tgkill</a></td>
+        <td>0x83</td>
+        <td>pid_t tgid</td>
+        <td>pid_t pid</td>
+        <td>int sig</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/signal.c#L3021">kernel/signal.c:3021</a></td>
+      </tr>
+      <tr>
+        <th scope="col">269</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/utimes.2.html">utimes</a></td>
+        <td>0x40D</td>
+        <td>char __user *filename</td>
+        <td>struct timeval __user *utimes</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/utimes.c#L215">fs/utimes.c:215</a></td>
+      </tr>
+      <tr>
+        <th scope="col">274</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/mq_open.2.html">mq_open</a></td>
+        <td>0xB4</td>
+        <td>const char __user *name</td>
+        <td>int oflag</td>
+        <td>umode_t mode</td>
+        <td>struct mq_attr __user *attr</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/ipc/mqueue.c#L847">ipc/mqueue.c:847</a></td>
+      </tr>
+      <tr>
+        <th scope="col">275</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/mq_unlink.2.html">mq_unlink</a></td>
+        <td>0xB5</td>
+        <td>const char __user *name</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/ipc/mqueue.c#L857">ipc/mqueue.c:857</a></td>
+      </tr>
+      <tr>
+        <th scope="col">276</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/mq_timedsend.2.html">mq_timedsend</a></td>
+        <td>0xB6</td>
+        <td>mqd_t mqdes</td>
+        <td>const char __user *msg_ptr</td>
+        <td>size_t msg_len</td>
+        <td>unsigned int msg_prio</td>
+        <td>const struct timespec __user *abs_timeout</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/ipc/mqueue.c#L1183">ipc/mqueue.c:1183</a></td>
+      </tr>
+      <tr>
+        <th scope="col">278</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/mq_notify.2.html">mq_notify</a></td>
+        <td>0xB8</td>
+        <td>mqd_t mqdes</td>
+        <td>const struct sigevent __user *notification</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/ipc/mqueue.c#L1342">ipc/mqueue.c:1342</a></td>
+      </tr>
+      <tr>
+        <th scope="col">279</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/mq_getsetattr.2.html">mq_getsetattr</a></td>
+        <td>0xB9</td>
+        <td>mqd_t mqdes</td>
+        <td>const struct mq_attr __user *mqstat</td>
+        <td>struct mq_attr __user *omqstat</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/ipc/mqueue.c#L1398">ipc/mqueue.c:1398</a></td>
+      </tr>
+      <tr>
+        <th scope="col">280</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/waitid.2.html">waitid</a></td>
+        <td>0x5F</td>
+        <td>int which</td>
+        <td>pid_t pid</td>
+        <td>struct siginfo __user *infop</td>
+        <td>int options</td>
+        <td>struct rusage __user *ru</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/exit.c#L1596">kernel/exit.c:1596</a></td>
+      </tr>
+      <tr>
+        <th scope="col">281</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/socket.2.html">socket</a></td>
+        <td>0xC6</td>
+        <td>int</td>
+        <td>int</td>
+        <td>int</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/net/socket.c#L1312">net/socket.c:1312</a></td>
+      </tr>
+      <tr>
+        <th scope="col">282</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/bind.2.html">bind</a></td>
+        <td>0xC8</td>
+        <td>int</td>
+        <td>struct sockaddr __user *</td>
+        <td>int</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/net/socket.c#L1462">net/socket.c:1462</a></td>
+      </tr>
+      <tr>
+        <th scope="col">283</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/connect.2.html">connect</a></td>
+        <td>0xCB</td>
+        <td>int</td>
+        <td>struct sockaddr __user *</td>
+        <td>int</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/net/socket.c#L1623">net/socket.c:1623</a></td>
+      </tr>
+      <tr>
+        <th scope="col">284</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/listen.2.html">listen</a></td>
+        <td>0xC9</td>
+        <td>int</td>
+        <td>int</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/net/socket.c#L1491">net/socket.c:1491</a></td>
+      </tr>
+      <tr>
+        <th scope="col">285</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/accept.2.html">accept</a></td>
+        <td>0xCA</td>
+        <td>int</td>
+        <td>struct sockaddr __user *</td>
+        <td>int __user *</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/net/socket.c#L1605">net/socket.c:1605</a></td>
+      </tr>
+      <tr>
+        <th scope="col">286</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getsockname.2.html">getsockname</a></td>
+        <td>0xCC</td>
+        <td>int</td>
+        <td>struct sockaddr __user *</td>
+        <td>int __user *</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/net/socket.c#L1655">net/socket.c:1655</a></td>
+      </tr>
+      <tr>
+        <th scope="col">287</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getpeername.2.html">getpeername</a></td>
+        <td>0xCD</td>
+        <td>int</td>
+        <td>struct sockaddr __user *</td>
+        <td>int __user *</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/net/socket.c#L1686">net/socket.c:1686</a></td>
+      </tr>
+      <tr>
+        <th scope="col">288</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/socketpair.2.html">socketpair</a></td>
+        <td>0xC7</td>
+        <td>int</td>
+        <td>int</td>
+        <td>int</td>
+        <td>int __user *</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/net/socket.c#L1353">net/socket.c:1353</a></td>
+      </tr>
+      <tr>
+        <th scope="col">289</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/send.2.html">send</a></td>
+        <td>0x432</td>
+        <td>int</td>
+        <td>void __user *</td>
+        <td>size_t</td>
+        <td>unsigned</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/read_write.c#L1462">fs/read_write.c:1462</a></td>
+      </tr>
+      <tr>
+        <th scope="col">290</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/sendto.2.html">sendto</a></td>
+        <td>0xCE</td>
+        <td>int</td>
+        <td>void __user *</td>
+        <td>size_t</td>
+        <td>unsigned</td>
+        <td>struct sockaddr __user *</td>
+        <td>int</td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/net/socket.c#L1718">net/socket.c:1718</a></td>
+      </tr>
+      <tr>
+        <th scope="col">291</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/recv.2.html">recv</a></td>
+        <td>0x431</td>
+        <td>int</td>
+        <td>void __user *</td>
+        <td>size_t</td>
+        <td>unsigned</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/net/socket.c#L1820">net/socket.c:1820</a></td>
+      </tr>
+      <tr>
+        <th scope="col">292</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/recvfrom.2.html">recvfrom</a></td>
+        <td>0xCF</td>
+        <td>int</td>
+        <td>void __user *</td>
+        <td>size_t</td>
+        <td>unsigned</td>
+        <td>struct sockaddr __user *</td>
+        <td>int __user *</td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/net/socket.c#L1774">net/socket.c:1774</a></td>
+      </tr>
+      <tr>
+        <th scope="col">293</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/shutdown.2.html">shutdown</a></td>
+        <td>0xD2</td>
+        <td>int</td>
+        <td>int</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/net/socket.c#L1895">net/socket.c:1895</a></td>
+      </tr>
+      <tr>
+        <th scope="col">294</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/setsockopt.2.html">setsockopt</a></td>
+        <td>0xD0</td>
+        <td>int fd</td>
+        <td>int level</td>
+        <td>int optname</td>
+        <td>char __user *optval</td>
+        <td>int optlen</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/net/socket.c#L1831">net/socket.c:1831</a></td>
+      </tr>
+      <tr>
+        <th scope="col">295</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getsockopt.2.html">getsockopt</a></td>
+        <td>0xD1</td>
+        <td>int fd</td>
+        <td>int level</td>
+        <td>int optname</td>
+        <td>char __user *optval</td>
+        <td>int __user *optlen</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/net/socket.c#L1865">net/socket.c:1865</a></td>
+      </tr>
+      <tr>
+        <th scope="col">296</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/sendmsg.2.html">sendmsg</a></td>
+        <td>0xD3</td>
+        <td>int fd</td>
+        <td>struct user_msghdr __user *msg</td>
+        <td>unsigned flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/net/socket.c#L2090">net/socket.c:2090</a></td>
+      </tr>
+      <tr>
+        <th scope="col">297</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/recvmsg.2.html">recvmsg</a></td>
+        <td>0xD4</td>
+        <td>int fd</td>
+        <td>struct user_msghdr __user *msg</td>
+        <td>unsigned flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/net/socket.c#L2260">net/socket.c:2260</a></td>
+      </tr>
+      <tr>
+        <th scope="col">298</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/semop.2.html">semop</a></td>
+        <td>0xC1</td>
+        <td>int semid</td>
+        <td>struct sembuf __user *sops</td>
+        <td>unsigned nsops</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/ipc/sem.c#L2139">ipc/sem.c:2139</a></td>
+      </tr>
+      <tr>
+        <th scope="col">299</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/semget.2.html">semget</a></td>
+        <td>0xBE</td>
+        <td>key_t key</td>
+        <td>int nsems</td>
+        <td>int semflg</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/ipc/sem.c#L558">ipc/sem.c:558</a></td>
+      </tr>
+      <tr>
+        <th scope="col">300</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/semctl.2.html">semctl</a></td>
+        <td>0xBF</td>
+        <td>int semid</td>
+        <td>int semnum</td>
+        <td>int cmd</td>
+        <td>unsigned long arg</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/ipc/sem.c#L1568">ipc/sem.c:1568</a></td>
+      </tr>
+      <tr>
+        <th scope="col">301</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/msgsnd.2.html">msgsnd</a></td>
+        <td>0xBD</td>
+        <td>int msqid</td>
+        <td>struct msgbuf __user *msgp</td>
+        <td>size_t msgsz</td>
+        <td>int msgflg</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/ipc/msg.c#L847">ipc/msg.c:847</a></td>
+      </tr>
+      <tr>
+        <th scope="col">302</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/msgrcv.2.html">msgrcv</a></td>
+        <td>0xBC</td>
+        <td>int msqid</td>
+        <td>struct msgbuf __user *msgp</td>
+        <td>size_t msgsz</td>
+        <td>long msgtyp</td>
+        <td>int msgflg</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/ipc/msg.c#L1130">ipc/msg.c:1130</a></td>
+      </tr>
+      <tr>
+        <th scope="col">303</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/msgget.2.html">msgget</a></td>
+        <td>0xBA</td>
+        <td>key_t key</td>
+        <td>int msgflg</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/ipc/msg.c#L266">ipc/msg.c:266</a></td>
+      </tr>
+      <tr>
+        <th scope="col">304</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/msgctl.2.html">msgctl</a></td>
+        <td>0xBB</td>
+        <td>int msqid</td>
+        <td>int cmd</td>
+        <td>struct msqid_ds __user *buf</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/ipc/msg.c#L528">ipc/msg.c:528</a></td>
+      </tr>
+      <tr>
+        <th scope="col">305</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/shmat.2.html">shmat</a></td>
+        <td>0xC4</td>
+        <td>int shmid</td>
+        <td>char __user *shmaddr</td>
+        <td>int shmflg</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/ipc/shm.c#L1433">ipc/shm.c:1433</a></td>
+      </tr>
+      <tr>
+        <th scope="col">306</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/shmdt.2.html">shmdt</a></td>
+        <td>0xC5</td>
+        <td>char __user *shmaddr</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/ipc/shm.c#L1468">ipc/shm.c:1468</a></td>
+      </tr>
+      <tr>
+        <th scope="col">307</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/shmget.2.html">shmget</a></td>
+        <td>0xC2</td>
+        <td>key_t key</td>
+        <td>size_t size</td>
+        <td>int flag</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/ipc/shm.c#L658">ipc/shm.c:658</a></td>
+      </tr>
+      <tr>
+        <th scope="col">308</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/shmctl.2.html">shmctl</a></td>
+        <td>0xC3</td>
+        <td>int shmid</td>
+        <td>int cmd</td>
+        <td>struct shmid_ds __user *buf</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/ipc/shm.c#L1032">ipc/shm.c:1032</a></td>
+      </tr>
+      <tr>
+        <th scope="col">309</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/add_key.2.html">add_key</a></td>
+        <td>0xD9</td>
+        <td>const char __user *_type</td>
+        <td>const char __user *_description</td>
+        <td>const void __user *_payload</td>
+        <td>size_t plen</td>
+        <td>key_serial_t destringid</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/security/keys/keyctl.c#L62">security/keys/keyctl.c:62</a></td>
+      </tr>
+      <tr>
+        <th scope="col">310</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/request_key.2.html">request_key</a></td>
+        <td>0xDA</td>
+        <td>const char __user *_type</td>
+        <td>const char __user *_description</td>
+        <td>const char __user *_callout_info</td>
+        <td>key_serial_t destringid</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/security/keys/keyctl.c#L158">security/keys/keyctl.c:158</a></td>
+      </tr>
+      <tr>
+        <th scope="col">311</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/keyctl.2.html">keyctl</a></td>
+        <td>0xDB</td>
+        <td>int cmd</td>
+        <td>unsigned long arg2</td>
+        <td>unsigned long arg3</td>
+        <td>unsigned long arg4</td>
+        <td>unsigned long arg5</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/security/keys/keyctl.c#L1637">security/keys/keyctl.c:1637</a></td>
+      </tr>
+      <tr>
+        <th scope="col">312</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/semtimedop.2.html">semtimedop</a></td>
+        <td>0xC0</td>
+        <td>int semid</td>
+        <td>struct sembuf __user *sops</td>
+        <td>unsigned nsops</td>
+        <td>const struct timespec __user *timeout</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/ipc/sem.c#L2112">ipc/sem.c:2112</a></td>
+      </tr>
+      <tr>
+        <th scope="col">314</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/ioprio_set.2.html">ioprio_set</a></td>
+        <td>0x1E</td>
+        <td>int which</td>
+        <td>int who</td>
+        <td>int ioprio</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/block/ioprio.c#L64">block/ioprio.c:64</a></td>
+      </tr>
+      <tr>
+        <th scope="col">315</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/ioprio_get.2.html">ioprio_get</a></td>
+        <td>0x1F</td>
+        <td>int which</td>
+        <td>int who</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/block/ioprio.c#L175">block/ioprio.c:175</a></td>
+      </tr>
+      <tr>
+        <th scope="col">316</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/inotify_init.2.html">inotify_init</a></td>
+        <td>0x413</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/notify/inotify/inotify_user.c#L663">fs/notify/inotify/inotify_user.c:663</a></td>
+      </tr>
+      <tr>
+        <th scope="col">317</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/inotify_add_watch.2.html">inotify_add_watch</a></td>
+        <td>0x1B</td>
+        <td>int fd</td>
+        <td>const char __user *path</td>
+        <td>u32 mask</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/notify/inotify/inotify_user.c#L668">fs/notify/inotify/inotify_user.c:668</a></td>
+      </tr>
+      <tr>
+        <th scope="col">318</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/inotify_rm_watch.2.html">inotify_rm_watch</a></td>
+        <td>0x1C</td>
+        <td>int fd</td>
+        <td>__s32 wd</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/notify/inotify/inotify_user.c#L725">fs/notify/inotify/inotify_user.c:725</a></td>
+      </tr>
+      <tr>
+        <th scope="col">319</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/mbind.2.html">mbind</a></td>
+        <td>0xEB</td>
+        <td>unsigned long start</td>
+        <td>unsigned long len</td>
+        <td>unsigned long mode</td>
+        <td>const unsigned long __user *nmask</td>
+        <td>unsigned long maxnode</td>
+        <td>unsigned flags</td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/mempolicy.c#L1323">mm/mempolicy.c:1323</a></td>
+      </tr>
+      <tr>
+        <th scope="col">320</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/get_mempolicy.2.html">get_mempolicy</a></td>
+        <td>0xEC</td>
+        <td>int __user *policy</td>
+        <td>unsigned long __user *nmask</td>
+        <td>unsigned long maxnode</td>
+        <td>unsigned long addr</td>
+        <td>unsigned long flags</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/mempolicy.c#L1460">mm/mempolicy.c:1460</a></td>
+      </tr>
+      <tr>
+        <th scope="col">321</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/set_mempolicy.2.html">set_mempolicy</a></td>
+        <td>0xED</td>
+        <td>int mode</td>
+        <td>const unsigned long __user *nmask</td>
+        <td>unsigned long maxnode</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/mempolicy.c#L1345">mm/mempolicy.c:1345</a></td>
+      </tr>
+      <tr>
+        <th scope="col">322</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/openat.2.html">openat</a></td>
+        <td>0x38</td>
+        <td>int dfd</td>
+        <td>const char __user *filename</td>
+        <td>int flags</td>
+        <td>umode_t mode</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/open.c#L1080">fs/open.c:1080</a></td>
+      </tr>
+      <tr>
+        <th scope="col">323</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/mkdirat.2.html">mkdirat</a></td>
+        <td>0x22</td>
+        <td>int dfd</td>
+        <td>const char __user * pathname</td>
+        <td>umode_t mode</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/namei.c#L3807">fs/namei.c:3807</a></td>
+      </tr>
+      <tr>
+        <th scope="col">324</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/mknodat.2.html">mknodat</a></td>
+        <td>0x21</td>
+        <td>int dfd</td>
+        <td>const char __user * filename</td>
+        <td>umode_t mode</td>
+        <td>unsigned dev</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/namei.c#L3732">fs/namei.c:3732</a></td>
+      </tr>
+      <tr>
+        <th scope="col">325</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/fchownat.2.html">fchownat</a></td>
+        <td>0x36</td>
+        <td>int dfd</td>
+        <td>const char __user *filename</td>
+        <td>uid_t user</td>
+        <td>gid_t group</td>
+        <td>int flag</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/open.c#L622">fs/open.c:622</a></td>
+      </tr>
+      <tr>
+        <th scope="col">326</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/futimesat.2.html">futimesat</a></td>
+        <td>0x42A</td>
+        <td>int dfd</td>
+        <td>const char __user *filename</td>
+        <td>struct timeval __user *utimes</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/utimes.c#L187">fs/utimes.c:187</a></td>
+      </tr>
+      <tr>
+        <th scope="col">327</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/fstatat64.2.html">fstatat64</a></td>
+        <td>0x4F</td>
+        <td>int dfd</td>
+        <td>const char __user *filename</td>
+        <td>struct stat64 __user *statbuf</td>
+        <td>int flag</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/stat.c#L502">fs/stat.c:502</a></td>
+      </tr>
+      <tr>
+        <th scope="col">328</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/unlinkat.2.html">unlinkat</a></td>
+        <td>0x23</td>
+        <td>int dfd</td>
+        <td>const char __user * pathname</td>
+        <td>int flag</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/namei.c#L4077">fs/namei.c:4077</a></td>
+      </tr>
+      <tr>
+        <th scope="col">329</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/renameat.2.html">renameat</a></td>
+        <td>0x26</td>
+        <td>int olddfd</td>
+        <td>const char __user * oldname</td>
+        <td>int newdfd</td>
+        <td>const char __user * newname</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/namei.c#L4627">fs/namei.c:4627</a></td>
+      </tr>
+      <tr>
+        <th scope="col">330</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/linkat.2.html">linkat</a></td>
+        <td>0x25</td>
+        <td>int olddfd</td>
+        <td>const char __user *oldname</td>
+        <td>int newdfd</td>
+        <td>const char __user *newname</td>
+        <td>int flags</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/namei.c#L4239">fs/namei.c:4239</a></td>
+      </tr>
+      <tr>
+        <th scope="col">331</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/symlinkat.2.html">symlinkat</a></td>
+        <td>0x24</td>
+        <td>const char __user * oldname</td>
+        <td>int newdfd</td>
+        <td>const char __user * newname</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/namei.c#L4114">fs/namei.c:4114</a></td>
+      </tr>
+      <tr>
+        <th scope="col">332</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/readlinkat.2.html">readlinkat</a></td>
+        <td>0x4E</td>
+        <td>int dfd</td>
+        <td>const char __user *path</td>
+        <td>char __user *buf</td>
+        <td>int bufsiz</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/stat.c#L382">fs/stat.c:382</a></td>
+      </tr>
+      <tr>
+        <th scope="col">333</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/fchmodat.2.html">fchmodat</a></td>
+        <td>0x35</td>
+        <td>int dfd</td>
+        <td>const char __user * filename</td>
+        <td>umode_t mode</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/open.c#L557">fs/open.c:557</a></td>
+      </tr>
+      <tr>
+        <th scope="col">334</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/faccessat.2.html">faccessat</a></td>
+        <td>0x30</td>
+        <td>int dfd</td>
+        <td>const char __user *filename</td>
+        <td>int mode</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/open.c#L353">fs/open.c:353</a></td>
+      </tr>
+      <tr>
+        <th scope="col">335</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/pselect6.2.html">pselect6</a></td>
+        <td>0x48</td>
+        <td>int</td>
+        <td>fd_set __user *</td>
+        <td>fd_set __user *</td>
+        <td>fd_set __user *</td>
+        <td>struct timespec __user *</td>
+        <td>void __user *</td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/select.c#L759">fs/select.c:759</a></td>
+      </tr>
+      <tr>
+        <th scope="col">336</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/ppoll.2.html">ppoll</a></td>
+        <td>0x49</td>
+        <td>struct pollfd __user *</td>
+        <td>unsigned int</td>
+        <td>struct timespec __user *</td>
+        <td>const sigset_t __user *</td>
+        <td>size_t</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/select.c#L1050">fs/select.c:1050</a></td>
+      </tr>
+      <tr>
+        <th scope="col">337</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/unshare.2.html">unshare</a></td>
+        <td>0x61</td>
+        <td>unsigned long unshare_flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/fork.c#L2319">kernel/fork.c:2319</a></td>
+      </tr>
+      <tr>
+        <th scope="col">340</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/splice.2.html">splice</a></td>
+        <td>0x4C</td>
+        <td>int fd_in</td>
+        <td>loff_t __user *off_in</td>
+        <td>int fd_out</td>
+        <td>loff_t __user *off_out</td>
+        <td>size_t len</td>
+        <td>unsigned int flags</td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/splice.c#L1382">fs/splice.c:1382</a></td>
+      </tr>
+      <tr>
+        <th scope="col">342</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/tee.2.html">tee</a></td>
+        <td>0x4D</td>
+        <td>int fdin</td>
+        <td>int fdout</td>
+        <td>size_t len</td>
+        <td>unsigned int flags</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/splice.c#L1718">fs/splice.c:1718</a></td>
+      </tr>
+      <tr>
+        <th scope="col">343</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/vmsplice.2.html">vmsplice</a></td>
+        <td>0x4B</td>
+        <td>int fd</td>
+        <td>const struct iovec __user *iov</td>
+        <td>unsigned long nr_segs</td>
+        <td>unsigned int flags</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/splice.c#L1334">fs/splice.c:1334</a></td>
+      </tr>
+      <tr>
+        <th scope="col">344</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/move_pages.2.html">move_pages</a></td>
+        <td>0xEF</td>
+        <td>pid_t pid</td>
+        <td>unsigned long nr_pages</td>
+        <td>const void __user * __user *pages</td>
+        <td>const int __user *nodes</td>
+        <td>int __user *status</td>
+        <td>int flags</td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/migrate.c#L1749">mm/migrate.c:1749</a></td>
+      </tr>
+      <tr>
+        <th scope="col">345</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getcpu.2.html">getcpu</a></td>
+        <td>0xA8</td>
+        <td>unsigned __user *cpu</td>
+        <td>unsigned __user *node</td>
+        <td>struct getcpu_cache __user *cache</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L2396">kernel/sys.c:2396</a></td>
+      </tr>
+      <tr>
+        <th scope="col">346</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/epoll_pwait.2.html">epoll_pwait</a></td>
+        <td>0x16</td>
+        <td>int epfd</td>
+        <td>struct epoll_event __user *events</td>
+        <td>int maxevents</td>
+        <td>int timeout</td>
+        <td>const sigset_t __user *sigmask</td>
+        <td>size_t sigsetsize</td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/eventpoll.c#L2214">fs/eventpoll.c:2214</a></td>
+      </tr>
+      <tr>
+        <th scope="col">347</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/kexec_load.2.html">kexec_load</a></td>
+        <td>0x68</td>
+        <td>unsigned long entry</td>
+        <td>unsigned long nr_segments</td>
+        <td>struct kexec_segment __user *segments</td>
+        <td>unsigned long flags</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/kexec.c#L195">kernel/kexec.c:195</a></td>
+      </tr>
+      <tr>
+        <th scope="col">348</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/utimensat.2.html">utimensat</a></td>
+        <td>0x58</td>
+        <td>int dfd</td>
+        <td>const char __user *filename</td>
+        <td>struct timespec __user *utimes</td>
+        <td>int flags</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/utimes.c#L168">fs/utimes.c:168</a></td>
+      </tr>
+      <tr>
+        <th scope="col">349</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/signalfd.2.html">signalfd</a></td>
+        <td>0x415</td>
+        <td>int ufd</td>
+        <td>sigset_t __user *user_mask</td>
+        <td>size_t sizemask</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/signalfd.c#L304">fs/signalfd.c:304</a></td>
+      </tr>
+      <tr>
+        <th scope="col">350</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/timerfd_create.2.html">timerfd_create</a></td>
+        <td>0x55</td>
+        <td>int clockid</td>
+        <td>int flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/timerfd.c#L387">fs/timerfd.c:387</a></td>
+      </tr>
+      <tr>
+        <th scope="col">351</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/eventfd.2.html">eventfd</a></td>
+        <td>0x414</td>
+        <td>unsigned int count</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/eventfd.c#L483">fs/eventfd.c:483</a></td>
+      </tr>
+      <tr>
+        <th scope="col">352</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/fallocate.2.html">fallocate</a></td>
+        <td>0x2F</td>
+        <td>int fd</td>
+        <td>int mode</td>
+        <td>loff_t offset</td>
+        <td>loff_t len</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/open.c#L336">fs/open.c:336</a></td>
+      </tr>
+      <tr>
+        <th scope="col">355</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/signalfd4.2.html">signalfd4</a></td>
+        <td>0x4A</td>
+        <td>int ufd</td>
+        <td>sigset_t __user *user_mask</td>
+        <td>size_t sizemask</td>
+        <td>int flags</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/signalfd.c#L250">fs/signalfd.c:250</a></td>
+      </tr>
+      <tr>
+        <th scope="col">356</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/eventfd2.2.html">eventfd2</a></td>
+        <td>0x13</td>
+        <td>unsigned int count</td>
+        <td>int flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/eventfd.c#L458">fs/eventfd.c:458</a></td>
+      </tr>
+      <tr>
+        <th scope="col">357</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/epoll_create1.2.html">epoll_create1</a></td>
+        <td>0x14</td>
+        <td>int flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/eventpoll.c#L1956">fs/eventpoll.c:1956</a></td>
+      </tr>
+      <tr>
+        <th scope="col">358</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/dup3.2.html">dup3</a></td>
+        <td>0x18</td>
+        <td>unsigned int oldfd</td>
+        <td>unsigned int newfd</td>
+        <td>int flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/file.c#L876">fs/file.c:876</a></td>
+      </tr>
+      <tr>
+        <th scope="col">359</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/pipe2.2.html">pipe2</a></td>
+        <td>0x3B</td>
+        <td>int __user *fildes</td>
+        <td>int flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/pipe.c#L839">fs/pipe.c:839</a></td>
+      </tr>
+      <tr>
+        <th scope="col">360</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/inotify_init1.2.html">inotify_init1</a></td>
+        <td>0x1A</td>
+        <td>int flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/notify/inotify/inotify_user.c#L638">fs/notify/inotify/inotify_user.c:638</a></td>
+      </tr>
+      <tr>
+        <th scope="col">361</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/preadv.2.html">preadv</a></td>
+        <td>0x45</td>
+        <td>unsigned long fd</td>
+        <td>const struct iovec __user *vec</td>
+        <td>unsigned long vlen</td>
+        <td>unsigned long pos_l</td>
+        <td>unsigned long pos_h</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/read_write.c#L1109">fs/read_write.c:1109</a></td>
+      </tr>
+      <tr>
+        <th scope="col">362</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/pwritev.2.html">pwritev</a></td>
+        <td>0x46</td>
+        <td>unsigned long fd</td>
+        <td>const struct iovec __user *vec</td>
+        <td>unsigned long vlen</td>
+        <td>unsigned long pos_l</td>
+        <td>unsigned long pos_h</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/read_write.c#L1129">fs/read_write.c:1129</a></td>
+      </tr>
+      <tr>
+        <th scope="col">364</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/perf_event_open.2.html">perf_event_open</a></td>
+        <td>0xF1</td>
+        <td> struct perf_event_attr __user *attr_uptr</td>
+        <td>pid_t pid</td>
+        <td>int cpu</td>
+        <td>int group_fd</td>
+        <td>unsigned long flags</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/events/core.c#L9910">kernel/events/core.c:9910</a></td>
+      </tr>
+      <tr>
+        <th scope="col">365</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/recvmmsg.2.html">recvmmsg</a></td>
+        <td>0xF3</td>
+        <td>int fd</td>
+        <td>struct mmsghdr __user *msg</td>
+        <td>unsigned int vlen</td>
+        <td>unsigned flags</td>
+        <td>struct timespec __user *timeout</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/net/socket.c#L2381">net/socket.c:2381</a></td>
+      </tr>
+      <tr>
+        <th scope="col">366</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/accept4.2.html">accept4</a></td>
+        <td>0xF2</td>
+        <td>int</td>
+        <td>struct sockaddr __user *</td>
+        <td>int __user *</td>
+        <td>int</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/net/socket.c#L1524">net/socket.c:1524</a></td>
+      </tr>
+      <tr>
+        <th scope="col">367</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/fanotify_init.2.html">fanotify_init</a></td>
+        <td>0x106</td>
+        <td>unsigned int flags</td>
+        <td>unsigned int event_f_flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/notify/fanotify/fanotify_user.c#L712">fs/notify/fanotify/fanotify_user.c:712</a></td>
+      </tr>
+      <tr>
+        <th scope="col">368</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/fanotify_mark.2.html">fanotify_mark</a></td>
+        <td>0x107</td>
+        <td>int fanotify_fd</td>
+        <td>unsigned int flags</td>
+        <td>u64 mask</td>
+        <td>int fd</td>
+        <td>const char __user *pathname</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/notify/fanotify/fanotify_user.c#L820">fs/notify/fanotify/fanotify_user.c:820</a></td>
+      </tr>
+      <tr>
+        <th scope="col">369</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/prlimit64.2.html">prlimit64</a></td>
+        <td>0x105</td>
+        <td>pid_t pid</td>
+        <td>unsigned int resource</td>
+        <td>const struct rlimit64 __user *new_rlim</td>
+        <td>struct rlimit64 __user *old_rlim</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sys.c#L1555">kernel/sys.c:1555</a></td>
+      </tr>
+      <tr>
+        <th scope="col">370</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/name_to_handle_at.2.html">name_to_handle_at</a></td>
+        <td>0x108</td>
+        <td>int dfd</td>
+        <td>const char __user *name</td>
+        <td>struct file_handle __user *handle</td>
+        <td>int __user *mnt_id</td>
+        <td>int flag</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/fhandle.c#L94">fs/fhandle.c:94</a></td>
+      </tr>
+      <tr>
+        <th scope="col">372</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/clock_adjtime.2.html">clock_adjtime</a></td>
+        <td>0x10A</td>
+        <td>clockid_t which_clock</td>
+        <td>struct timex __user *tx</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/time/posix-timers.c#L1074">kernel/time/posix-timers.c:1074</a></td>
+      </tr>
+      <tr>
+        <th scope="col">373</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/syncfs.2.html">syncfs</a></td>
+        <td>0x10B</td>
+        <td>int fd</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/sync.c#L155">fs/sync.c:155</a></td>
+      </tr>
+      <tr>
+        <th scope="col">374</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/sendmmsg.2.html">sendmmsg</a></td>
+        <td>0x10D</td>
+        <td>int fd</td>
+        <td>struct mmsghdr __user *msg</td>
+        <td>unsigned int vlen</td>
+        <td>unsigned flags</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/net/socket.c#L2165">net/socket.c:2165</a></td>
+      </tr>
+      <tr>
+        <th scope="col">375</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/setns.2.html">setns</a></td>
+        <td>0x10C</td>
+        <td>int fd</td>
+        <td>int nstype</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/nsproxy.c#L237">kernel/nsproxy.c:237</a></td>
+      </tr>
+      <tr>
+        <th scope="col">378</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/kcmp.2.html">kcmp</a></td>
+        <td>0x110</td>
+        <td>pid_t pid1</td>
+        <td>pid_t pid2</td>
+        <td>int type</td>
+        <td>unsigned long idx1</td>
+        <td>unsigned long idx2</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/kcmp.c#L152">kernel/kcmp.c:152</a></td>
+      </tr>
+      <tr>
+        <th scope="col">379</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/finit_module.2.html">finit_module</a></td>
+        <td>0x111</td>
+        <td>int fd</td>
+        <td>const char __user *uargs</td>
+        <td>int flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/module.c#L3836">kernel/module.c:3836</a></td>
+      </tr>
+      <tr>
+        <th scope="col">380</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/sched_setattr.2.html">sched_setattr</a></td>
+        <td>0x112</td>
+        <td>pid_t pid</td>
+        <td>struct sched_attr __user *attr</td>
+        <td>unsigned int flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sched/core.c#L4432">kernel/sched/core.c:4432</a></td>
+      </tr>
+      <tr>
+        <th scope="col">381</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/sched_getattr.2.html">sched_getattr</a></td>
+        <td>0x113</td>
+        <td>pid_t pid</td>
+        <td>struct sched_attr __user *attr</td>
+        <td>unsigned int size</td>
+        <td>unsigned int flags</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sched/core.c#L4573">kernel/sched/core.c:4573</a></td>
+      </tr>
+      <tr>
+        <th scope="col">382</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/renameat2.2.html">renameat2</a></td>
+        <td>0x114</td>
+        <td>int olddfd</td>
+        <td>const char __user *oldname</td>
+        <td>int newdfd</td>
+        <td>const char __user *newname</td>
+        <td>unsigned int flags</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/namei.c#L4484">fs/namei.c:4484</a></td>
+      </tr>
+      <tr>
+        <th scope="col">383</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/seccomp.2.html">seccomp</a></td>
+        <td>0x115</td>
+        <td>unsigned int op</td>
+        <td>unsigned int flags</td>
+        <td>const char __user *uargs</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/seccomp.c#L940">kernel/seccomp.c:940</a></td>
+      </tr>
+      <tr>
+        <th scope="col">384</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/getrandom.2.html">getrandom</a></td>
+        <td>0x116</td>
+        <td>char __user *buf</td>
+        <td>size_t count</td>
+        <td>unsigned int flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/drivers/char/random.c#L1908">drivers/char/random.c:1908</a></td>
+      </tr>
+      <tr>
+        <th scope="col">385</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/memfd_create.2.html">memfd_create</a></td>
+        <td>0x117</td>
+        <td>const char __user *uname_ptr</td>
+        <td>unsigned int flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/shmem.c#L3658">mm/shmem.c:3658</a></td>
+      </tr>
+      <tr>
+        <th scope="col">386</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/bpf.2.html">bpf</a></td>
+        <td>0x118</td>
+        <td>int cmd</td>
+        <td>union bpf_attr *attr</td>
+        <td>unsigned int size</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/bpf/syscall.c#L1453">kernel/bpf/syscall.c:1453</a></td>
+      </tr>
+      <tr>
+        <th scope="col">387</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/execveat.2.html">execveat</a></td>
+        <td>0x119</td>
+        <td>int dfd</td>
+        <td>const char __user *filename</td>
+        <td>const char __user *const __user *argv</td>
+        <td>const char __user *const __user *envp</td>
+        <td>int flags</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/exec.c#L1932">fs/exec.c:1932</a></td>
+      </tr>
+      <tr>
+        <th scope="col">388</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/userfaultfd.2.html">userfaultfd</a></td>
+        <td>0x11A</td>
+        <td>int flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/userfaultfd.c#L1940">fs/userfaultfd.c:1940</a></td>
+      </tr>
+      <tr>
+        <th scope="col">389</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/membarrier.2.html">membarrier</a></td>
+        <td>0x11B</td>
+        <td>int cmd</td>
+        <td>int flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/kernel/sched/membarrier.c#L152">kernel/sched/membarrier.c:152</a></td>
+      </tr>
+      <tr>
+        <th scope="col">390</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/mlock2.2.html">mlock2</a></td>
+        <td>0x11C</td>
+        <td>unsigned long start</td>
+        <td>size_t len</td>
+        <td>int flags</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/mlock.c#L716">mm/mlock.c:716</a></td>
+      </tr>
+      <tr>
+        <th scope="col">391</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/copy_file_range.2.html">copy_file_range</a></td>
+        <td>0x11D</td>
+        <td>int fd_in</td>
+        <td>loff_t __user *off_in</td>
+        <td>int fd_out</td>
+        <td>loff_t __user *off_out</td>
+        <td>size_t len</td>
+        <td>unsigned int flags</td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/read_write.c#L1621">fs/read_write.c:1621</a></td>
+      </tr>
+      <tr>
+        <th scope="col">392</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/preadv2.2.html">preadv2</a></td>
+        <td>0x11E</td>
+        <td>unsigned long fd</td>
+        <td>const struct iovec __user *vec</td>
+        <td>unsigned long vlen</td>
+        <td>unsigned long pos_l</td>
+        <td>unsigned long pos_h</td>
+        <td>rwf_t flags</td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/read_write.c#L1117">fs/read_write.c:1117</a></td>
+      </tr>
+      <tr>
+        <th scope="col">393</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/pwritev2.2.html">pwritev2</a></td>
+        <td>0x11F</td>
+        <td>unsigned long fd</td>
+        <td>const struct iovec __user *vec</td>
+        <td>unsigned long vlen</td>
+        <td>unsigned long pos_l</td>
+        <td>unsigned long pos_h</td>
+        <td>rwf_t flags</td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/read_write.c#L1137">fs/read_write.c:1137</a></td>
+      </tr>
+      <tr>
+        <th scope="col">394</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/pkey_mprotect.2.html">pkey_mprotect</a></td>
+        <td>0x120</td>
+        <td>unsigned long start</td>
+        <td>size_t len</td>
+        <td>unsigned long prot</td>
+        <td>int pkey</td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/mprotect.c#L522">mm/mprotect.c:522</a></td>
+      </tr>
+      <tr>
+        <th scope="col">395</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/pkey_alloc.2.html">pkey_alloc</a></td>
+        <td>0x121</td>
+        <td>unsigned long flags</td>
+        <td>unsigned long init_val</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/mprotect.c#L528">mm/mprotect.c:528</a></td>
+      </tr>
+      <tr>
+        <th scope="col">396</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/pkey_free.2.html">pkey_free</a></td>
+        <td>0x122</td>
+        <td>int pkey</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/mm/mprotect.c#L558">mm/mprotect.c:558</a></td>
+      </tr>
+      <tr>
+        <th scope="col">397</th>
+        <td><a class="badge badge-dark" href="http://man7.org/linux/man-pages/man2/statx.2.html">statx</a></td>
+        <td>0x123</td>
+        <td>int dfd</td>
+        <td>const char __user *path</td>
+        <td>unsigned flags</td>
+        <td>unsigned mask</td>
+        <td>struct statx __user *buffer</td>
+        <td></td>
+        <td><a class="badge badge-dark" href="http://elixir.free-electrons.com/linux/v4.14.14/source/fs/stat.c#L560">fs/stat.c:560</a></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

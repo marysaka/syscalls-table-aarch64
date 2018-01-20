@@ -1,0 +1,26 @@
+{
+  "name": "syscalls-table-aarch64",
+  "version": "1.0.0",
+  "description": "Linux syscalls for aarch64",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "install": "./generate.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "linux",
+    "syscalls",
+    "aarch64"
+  ],
+  "author": "Thog",
+  "license": "MIT",
+  "dependencies": {
+    "ctags": "git+https://github.com/Thog/node-ctags.git",
+    "deasync": "^0.1.12",
+    "rimraf": "^2.6.2"
+  }
+}
